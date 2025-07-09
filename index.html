@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RFS Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .xl-logo {
+      height: 40px;
+      margin-left: auto;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <div class="splash-content">
+      <img src="img/RFS.PNG" alt="RFS Logo" class="splash-logo" />
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="user-info">
+        <p class="role">RFS</p>
+        <p class="online">● Online</p>
+      </div>
+      <nav class="menu">
+        <a href="http://interval.lncorp.id/rfs" target="_blank">Interval</a>
+        <a href="https://convertero2an.wuaze.com/" target="_blank">KML to CSV</a>
+        <a href="https://linknetid.sharepoint.com/:x:/r/sites/RFP-LN/_layouts/15/doc2.aspx?sourcedoc=%7Bc047fe9f-a60c-4705-8147-a684e3a9de16%7D" target="_blank">Monitoring RFS</a>
+        <a href="https://www.yogi-indesign.biz.id/" target="_blank">GPON</a>
+        <a href="pages/kmz.html" target="_blank">ALL KMZ</a>
+
+        <!-- HPM Process -->
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">HPM Process <i class="fas fa-chevron-down arrow-icon"></i></a>
+          <div class="dropdown-menu">
+            <a href="http://bmjkt-000037/hp_brim/admFiberNode.aspx" target="_blank">Upload FDT</a>
+            <a href="http://bmjkt-000187/provutility_brim/BRIM_ONTNetworkGPONBulk.aspx" target="_blank">Upload GPON</a>
+            <a href="http://bmjkt-000037/hp_brim/updatemano.aspx" target="_blank">Create Memo</a>
+            <a href="http://bmjkt-000037/hp_brim/bulkupload.aspx" target="_blank">Upload Homepass</a>
+            <a href="http://bmjkt-000037/hp_brim/Servco_AssignRFSDate.aspx" target="_blank">HPDB</a>
+          </div>
+        </div>
+
+        <!-- Vendor Dropdown -->
+        <div class="dropdown" id="vendor-dropdown">
+          <a href="#" class="dropdown-toggle">
+            <span id="vendor-label">Vendor</span> <i class="fas fa-chevron-down arrow-icon"></i>
+          </a>
+          <div class="dropdown-menu" id="vendor-menu"></div>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+      <header class="header">
+        <div class="header-content">
+          <div>
+            <h1>Dashboard</h1>
+            <p class="user-label">Ready for Service</p>
+          </div>
+          <img src="img/LN.png" alt="XL Logo" class="xl-logo" />
+        </div>
+      </header>
+
+      <div class="cards">
+        <div class="card" data-vendor="ZTE"><img src="img/1ZTE.png" class="card-img" /><p>ZTE</p></div>
+        <div class="card" data-vendor="YOFC"><img src="img/1YOFC.jpeg" class="card-img" /><p>YOFC</p></div>
+        <div class="card" data-vendor="Fiber Home"><img src="img/FTI.png" class="card-img" /><p>Fiber Home</p></div>
+        <div class="card" data-vendor="D-Link"><img src="img/D-Link.png" class="card-img" /><p>D-Link</p></div>
+        <div class="card" data-vendor="MPS"><img src="img/MPS.png" class="card-img" /><p>MPS</p></div>
+        <div class="card" data-vendor="Multi Kontrol Nusantara"><img src="img/MKN.png" class="card-img" /><p>Multi Kontrol Nusantara</p></div>
+        <div class="card" data-vendor="Quantum"><img src="img/quantum.png" class="card-img" /><p>Quantum</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Permanent Credit Footer via JS -->
+  <script src="fprotect.js"></script>
+
+  <!-- Dashboard Logic -->
+  <script>
+    const vendorData = {
+      "ZTE": [
+    { "label": "Monitoring DRM ZTE", "link": "https://linknetid.sharepoint.com/:x:/r/sites/DRMLastmile/_layouts/15/doc2.aspx?sourcedoc=%7B691C69FC-6C4A-4EB2-9F70-F8DEB45D5939%7D&file=Monitoring%20DRM%20ZTE.xlsx&action=default&mobileredirect=true" },
+    { "label": "APD ZTE", "link": "Not Found" },
+    { "label": "Backdoor ZTE", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FBackdoor%20RFS%2FZTE&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&csf=1&web=1&e=zpFPdm&CID=30ece7c4%2Db408%2D4ea5%2D84d9%2Df95104cf50da&FolderCTID=0x0120002BA3A8428895D04ABE94B70F9677B820" },
+    { "label": "Server ZTE", "link": "server-zte.html" },
+    { "label": "Redline ZTE", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FZTE&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ],
+
+  "YOFC": [
+    { "label": "Monitoring DRM YOFC", "link": "https://linknetid.sharepoint.com/:x:/r/sites/DRMLastmile/_layouts/15/doc2.aspx?sourcedoc=%7B8e8cc4ef-77f1-44f4-ab14-c94f9cb80e72%7D&action=edit&wdinitialsession=a0f7522a-19fc-ea37-7fd8-6a34efd0331b&wdrldsc=2&wdrldc=2&wdrldr=FileOpenUserUnauthorized%2CDeploymentInvalidEditSess" },
+    { "label": "APD YOFC", "link": "apd-yofc.html" },
+    { "label": "Backdoor YOFC", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FBackdoor%20RFS%2FYOFC&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&csf=1&web=1&e=zpFPdm&CID=30ece7c4%2Db408%2D4ea5%2D84d9%2Df95104cf50da&FolderCTID=0x0120002BA3A8428895D04ABE94B70F9677B820" },
+    { "label": "Server YOFC", "link": "server-yofc.html" },
+    { "label": "Redline YOFC", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FYOFC&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ],
+
+  "Fiber Home": [
+    { "label": "Monitoring DRM FTI", "link": "https://linknetid.sharepoint.com/:x:/r/sites/DRMLastmile/_layouts/15/Doc.aspx?sourcedoc=%7Bb043e74c-7667-4050-88d4-3c0fa31ce2ff%7D&action=default&CID=1bbb459d-f8e8-4965-b4f3-5bdfd0f4b1ae&_SRM=2%3AE%3A8" },
+    { "label": "APD FTI", "link": "not found" },
+    { "label": "Backdoor FTI", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FBackdoor%20RFS%2FFiberhome&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" },
+    { "label": "Server FTI", "link": "server-fti.html" },
+    { "label": "Redline FTI", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FFTI&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ],
+
+  "D-Link": [
+    { "label": "Monitoring DRM D-Link", "link": "monitoring-dlink.html" },
+    { "label": "APD D-Link", "link": "not found" },
+    { "label": "Backdoor D-Link", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FBackdoor%20RFS%2FRunjian&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" },
+    { "label": "Server D-Link", "link": "server-dlink.html" },
+    { "label": "Redline D-Link", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FD%2DLINK&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ],
+
+  "MPS": [
+    { "label": "Monitoring DRM MPS", "link": "not found" },
+    { "label": "APD MPS", "link": "not found" },
+    { "label": "Backdoor MPS", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FBackdoor%20RFS%2FMPS&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" },
+    { "label": "Server MPS", "link": "server-mps.html" },
+    { "label": "Redline MPS", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FMPS&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ],
+
+  "Multi Kontrol Nusantara": [
+    { "label": "Monitoring DRM MKN", "link": "monitoring-mkn.html" },
+    { "label": "APD MKN", "link": "not found" },
+    { "label": "Backdoor MKN", "link": "not found" },
+    { "label": "Server MKN", "link": "server-mkn.html" },
+    { "label": "Redline MKN", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FMKN&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ],
+
+  "Quantum": [
+    { "label": "Monitoring DRM Quantum", "link": "not found" },
+    { "label": "APD Quantum", "link": "not found" },
+    { "label": "Backdoor Quantum", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FBackdoor%20RFS%2FQuantum&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" },
+    { "label": "Server Quantum", "link": "server-qn.html" },
+    { "label": "Redline Quantum", "link": "https://linknetid.sharepoint.com/sites/RFP-LN/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FRFP%2DLN%2FShared%20Documents%2FDocument%5FRFS%2FDrawing%20Redline%20confirmed%20RegLead%2FQUANTUM&viewid=ccfd9129%2Df49e%2D41a6%2Da272%2D4caed15e8c88&p=true&ga=1" }
+  ]
+};
+
+    const cards = document.querySelectorAll('.card');
+    const vendorLabel = document.getElementById('vendor-label');
+    const vendorMenu = document.getElementById('vendor-menu');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const vendor = card.dataset.vendor;
+        vendorLabel.textContent = vendor;
+        vendorMenu.innerHTML = '';
+
+        vendorData[vendor].forEach(item => {
+          const link = document.createElement('a');
+          link.href = item.link;
+          link.textContent = item.label;
+          link.target = '_blank';
+          vendorMenu.appendChild(link);
+        });
+
+        const dropdown = document.querySelector('#vendor-dropdown');
+        dropdown.classList.add('open');
+        vendorMenu.style.display = 'flex';
+
+        card.classList.add('clicked');
+        setTimeout(() => card.classList.remove('clicked'), 300);
+      });
+    });
+
+    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        const dropdown = this.parentElement;
+        const menu = this.nextElementSibling;
+        dropdown.classList.toggle('open');
+        menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+      });
+    });
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('splash-screen').classList.add('hide');
+        document.body.classList.add('loaded');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

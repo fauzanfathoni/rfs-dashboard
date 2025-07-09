@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Server ZTE</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #cceeff, #fefcea);
+      color: #333;
+      font-family: "Courier New", monospace;
+      padding: 20px;
+    }
+    .notepad {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-size: 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .copy-btn {
+      margin-top: 15px;
+      padding: 5px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #4b6cb7;
+      color: white;
+    }
+    .copy-btn:hover {
+      background-color: #3a539b;
+    }
+  </style>
+</head>
+<body>
+  <div class="notepad">
+    <div class="title">Server MKN:</div>
+    <div id="path">\\BMJAKARTA\File-Server\B2S_Design_Management\RFS\B2S\MKN</div>
+    <button class="copy-btn" onclick="copyPath()">Copy to Clipboard</button>
+  </div>
+  <script>
+    function copyPath() {
+      const path = document.getElementById('path').innerText;
+      navigator.clipboard.writeText(path).then(() => {
+        alert("Path copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>

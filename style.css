@@ -16,10 +16,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 220px;
-  background: linear-gradient(to bottom, #1e3c72, #2a5298); /* biru tua ke biru sedang */
-  color: white;
-  padding: 20px;
+  height: 100vh;            /* Set tinggi maksimum viewport */
+  overflow-y: auto;         /* Aktifkan scroll vertikal */
+  overflow-x: hidden;       /* Hindari scroll horizontal */
 }
 
 .user-info {

@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom right, #f0f6fc, #ffffff); /* biru muda ke putih */
+  background: linear-gradient(to bottom right, #f0f6fc, #ffffff);
 }
 
 .container {
@@ -16,9 +16,21 @@ body {
 
 /* Sidebar */
 .sidebar {
-  height: 100vh;            /* Set tinggi maksimum viewport */
-  overflow-y: auto;         /* Aktifkan scroll vertikal */
-  overflow-x: hidden;       /* Hindari scroll horizontal */
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #1b3365; /* Tambahan penting */
+  color: white;
+  padding: 20px;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
 }
 
 .user-info {
@@ -104,7 +116,7 @@ body {
 
 /* Header */
 .header {
-  background: linear-gradient(to right, #1e3c72, #008deb); /* tetap */
+  background: linear-gradient(to right, #1e3c72, #008deb);
   color: #ffffff;
   padding: 20px;
   display: flex;
@@ -112,7 +124,8 @@ body {
   align-items: center;
 }
 
-.header h1, .header p {
+.header h1,
+.header p {
   margin: 0;
 }
 
@@ -134,7 +147,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
   height: 180px;
 }
@@ -183,7 +196,7 @@ body {
 .Powered {
   margin-top: 10px;
   color: #3a3a3a;
-  font-size: 0.6em; /* sebelumnya 0.8em atau 1em */
+  font-size: 0.6em;
   font-style: italic;
   opacity: 0.7;
 }
